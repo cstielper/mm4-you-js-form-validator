@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form action="" name="contact-form" novalidate>
+	<h1>Please enter your information:</h1>
+	<fieldset>
+		<label for="first-name"><span class="asterisk">*</span> First Name:
+			<input type="text" name="first-name" id="first-name" class="required" data-error-label="First Name">
+		</label>
+		<label for="last-name"><span class="asterisk">*</span> Last Name:
+			<input type="text" name="last-name" id="last-name" class="required" data-error-label="Last Name">
+		</label>
+		<label for="address-1">Address 1:
+			<input type="text" name="address-1" id="address-1" data-error-label="Address 1">
+		</label>
+		<label for="city"><span class="asterisk">*</span> City:
+			<input type="text" name="city" id="city" class="required" data-error-label="City">
+		</label>
+		<label for="state">State:
+			<input type="text" name="state" id="state" data-error-label="State">
+		</label>
+		<label for="zip">Zip:
+			<input type="text" name="zip" id="zip" data-error-label="Zip">
+		</label>
+		<label for="email-address"><span class="asterisk">*</span> Email:
+			<input type="email" name="email-address" id="email-address" class="required" data-error-label="Email">
+		</label>
+	</fieldset>
+	
+	<fieldset>
+		<label for="select-menu"><span class="asterisk">*</span> Make a Choice:
+			<select name="select-menu" id="select-menu" class="required" data-error-label="Select Menu">
+				<option value="" selected="selected">Select Menu</option>
+				<option value="Select Menu 1">Select Menu 1</option>
+				<option value="Select Menu 2">Select Menu 2</option>
+				<option value="Select Menu 3">Select Menu 3</option>
+			</select>
+		</label>
+	</fieldset>
+
+	<fieldset class="checkbox-grp">
+		<legend><span class="asterisk">*</span> Please check all that apply:</legend>
+		<label><input type="checkbox" value="Checkbox 1" name="checkboxes" id="check-box-1" class="required" data-error-label="Checkbox"> Checkbox 1</label>
+		<label><input type="checkbox" value="Checkbox 2" name="checkboxes" id="check-box-2" class="required" data-error-label="Checkbox"> Checkbox 2</label>
+		<label><input type="checkbox" value="Checkbox 3" name="checkboxes" id="check-box-3" class="required" data-error-label="Checkbox"> Checkbox 3</label>
+	</fieldset>
+	
+	<fieldset class="radio-grp">
+		<legend><span class="asterisk">*</span> Please make a selection:</legend>
+		<label><input type="radio" value="Radio 1" name="radio-btns" id="radio-btn-1" class="required" data-error-label="Radio"> Radio 1</label>
+		<label><input type="radio" value="Radio 2" name="radio-btns" id="radio-btn-2" class="required" data-error-label="Radio"> Radio 2</label>
+		<label><input type="radio" value="Radio 3" name="radio-btns" id="radio-btn-3" class="required" data-error-label="Radio"> Radio 3</label>
+	</fieldset>
+	
+	<fieldset class="checkbox-grp">
+		<legend><span class="asterisk">*</span> Please check all that apply:</legend>
+		<label><input type="checkbox" value="Checkbox 4" name="checkboxes-set-2" id="check-box-4" class="required" data-error-label="Checkbox Set 2"> Checkbox 4</label>
+		<label><input type="checkbox" value="Checkbox 5" name="checkboxes-set-2" id="check-box-5" class="required" data-error-label="Checkbox Set 2"> Checkbox 5</label>
+		<label><input type="checkbox" value="Checkbox 6" name="checkboxes-set-2" id="check-box-6" class="required" data-error-label="Checkbox Set 2"> Checkbox 6</label>
+	</fieldset>
+
+	<fieldset>
+		<label for="alt-email-address">Alternate Email:
+			<input type="email" name="alt-email-address" id="alt-email-address" data-error-label="Alternate Email">
+		</label>
+	</fieldset>
+
+	<fieldset>
+		<label for="comments">Comments:
+			<textarea name="comments" id="comments" rows="6"></textarea>
+		</label>
+	</fieldset>
+	
+	<div class="msg-box"></div>
+	<input type="submit" value="Submit">
+</form>
+<script src="js/min/mm4-you-validate-min.js"></script>
+</body>
+</html>
